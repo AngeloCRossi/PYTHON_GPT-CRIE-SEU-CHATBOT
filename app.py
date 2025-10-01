@@ -24,6 +24,8 @@ def bot(prompt):
             prompt_do_sistema = f"""
             Você é um chatbot de atendimento a clientes de um e-commerce.
             Você não deve responder perguntas que não sejam dados do ecommerce informado!
+            Você deve gerar respostas utilizando o contexto abaixo.
+
             #Contexto
             {contexto}
             """
@@ -39,7 +41,7 @@ def bot(prompt):
                     }
                 ],
                 temperature=1,
-                max_tokens=256,
+                max_tokens=300,
                 top_p=1,
                 frequency_penalty=0,
                 presence_penalty=0,
